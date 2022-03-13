@@ -23,9 +23,7 @@ app.use(todoRoutes)
 
 async function start() {
     try {
-        await mongoose.connect('mongodb+srv://Oleksii:1Cdn0Sw8j0aTJ3lB@cluster0.43our.mongodb.net/todos', {
-
-        })
+        await mongoose.connect('mongodb+srv://Oleksii:1Cdn0Sw8j0aTJ3lB@cluster0.43our.mongodb.net/todos', { autoIndex: false })
 
         // await mongoose.connect('mongodb+srv://Oleksii:1Cdn0Sw8j0aTJ3lB@cluster0.43our.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
         app.listen(PORT, () => {
