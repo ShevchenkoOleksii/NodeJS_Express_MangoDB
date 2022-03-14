@@ -30,12 +30,18 @@ async function start() {
             console.log(`Server has been started...`)
         })
     } catch (e) {
-
         console.log(e)
     }
 }
 
 start()
+    .then((req, res) => {
+        console.log(req)
+        console.log(res)
+    })
+    .catch((error) => {
+        console.log(error)
+    })
 
 
 
